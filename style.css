@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    color: #333;
+    background: #ffcf86;
+    color: #00025e;
 }
 input[type="text"] {
     width: 65vw;
@@ -37,44 +37,45 @@ input[type="text"] {
 
     height: 95%;
     width: 95%;
-    border-radius: 50px;
+    border-radius: 30px;
 
 }
 #wyniki{
-    width: 50vw;
+    width: 50%;
     float: left;
     height: 40vw;
 }
 #alerty{
-    width: 50vw;
-    float: left;
+    width: 50%;
+    float: right;
     height: 40vw;
 }
 #t3{
     width: 90%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 #t4{
     width: 90%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 table {
 
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    
     
     
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #ffcf86;
     padding: 10px;
     text-align: center;
     font-size: 1.2rem;
+    
 }
 
 th {
@@ -82,4 +83,7 @@ th {
     color: #fff;
     font-weight: bold;
 }
-
+#gif{
+    width: 100vw;
+    
+}
