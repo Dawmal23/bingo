@@ -1,0 +1,122 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffcf86;
+    color: #00025e;
+    
+}
+input[type="text"] {
+    width: 65vw;
+    height: 65vw;
+  }
+#przycisk{
+    width: 65vw;
+    height: 65vw;
+}
+#login{
+    font-size: 10vw;
+}
+#pierw{
+    text-align: center;
+    font-size: 10vw;
+    width: 100%;
+    
+}
+#potem{
+    
+    text-align: center;
+    width: 100%;
+    height: 110vw;
+    
+}
+#tabeleczka{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-radius: 10vw;
+
+}
+#tabeleczka td{
+    border: 1px solid #ccc;
+    width: 20vw;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    vertical-align: middle;
+    font-size: clamp(10px, 5vw, 20px);
+    overflow: hidden;
+    padding: 0;
+}
+#wyniki{
+    width: 50%;
+    float: left;
+    height: 40vw;
+}
+#alerty{
+    width: 50%;
+    float: right;
+    height: 40vw;
+}
+#t3{
+    margin: 20px auto;
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    font-size: 3rem;
+    
+}
+#t4{
+    margin: 20px auto;
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    font-size: 3rem;
+}
+table {
+
+    
+    border-collapse: collapse;
+    background-color: #ffffff;
+    
+}
+
+th, td {
+    border: 0.2vw solid #ffcf86;
+    padding: 10px;
+    text-align: center;
+    white-space: normal;
+
+
+    
+}
+
+th {
+    background-color: #f4b6c2;
+    color: #fff;
+    font-weight: bold;
+}
+.login_content{
+    border: 1px solid #ccc;
+    width: 20vw;
+    height: 5vw;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    vertical-align: middle;
+    font-size: clamp(10px, 5vw, 20px);
+    overflow: hidden;
+    padding: 0;
+}
+#wyniki td{
+    height: 14.28%;
+    width: 14.28%;
+}
+#alerty td{
+    height: 14.28%;
+    width: 14.28%;
+}
