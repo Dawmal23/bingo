@@ -37,7 +37,7 @@ input[type="text"] {
 
     height: 95vw;
     width:95vw;
-    border-radius: 30px;
+    border-radius: 5%;
 
 }
 #wyniki{
@@ -71,7 +71,7 @@ table {
 }
 
 th, td {
-    border: 1px solid #ffcf86;
+    border: 0.2vw solid #ffcf86;
     padding: 10px;
     text-align: center;
     font-size: 0.6rem;
@@ -88,7 +88,8 @@ th {
 .login_content{
     width: 100%;
     text-align: center;
-    border: 1vw solid #ffcf86;
+    border: 0.2vw solid #ffcf86;
     font-weight: 2500%;
     font-size: 1.2rem;
+    border-radius: 20%;
 }
