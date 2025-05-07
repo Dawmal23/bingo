@@ -23,7 +23,7 @@ socket.on('nicks', (nick =>{
 
 socket.on('currentUser', (currentUser) => {
     document.getElementById('napis').textContent = 'Gracz: '+currentUser;
-    console.log(currentUser)
+    socket.emit('table_fill', currentUser)
 });
 socket.on('table_row', (cells) =>{
     const table1 = document.getElementById('tabeleczka')

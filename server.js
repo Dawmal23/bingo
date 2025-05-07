@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
 
     let currentUser = null;
     socket.on('tab_creation', (currentUser) => {
-        socket.emit('currentUser', currentUser)
+        
 
         db.query('CALL `bingo`.`Create_Bingo_Card`(?)', [currentUser])
         db.query('SELECT COUNT(*) as counter from '+currentUser.toLowerCase(), (err, if_made)=>{
@@ -42,7 +42,10 @@ io.on('connection', (socket) => {
             if(if_made[0].counter<=0){
                 db.query('CALL `bingo`.`Fill_Bingo_Card`(?)', [currentUser])
             }
+            socket.emit('currentUser', currentUser)
         })
+    });
+    socket.on('table_fill', (currentUser) =>{
         db.query("SELECT EventId FROM "+currentUser.toLowerCase(), (err, tab_files)=>{
             socket.emit('clr_table', val)
             let cells = []
