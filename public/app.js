@@ -1,6 +1,41 @@
 const socket = io();
 //socket - locking in server
 
+//text scaling
+function text_scalling(){
+    const buttons = document.querySelectorAll('td button');
+    const dpr = window.devicePixelRatio || 1;
+  
+    buttons.forEach(button => {
+      // Reset styles first
+      button.style.fontSize = '50';
+      button.style.lineHeight = '1';
+      button.style.whiteSpace = 'normal';
+      button.style.overflow = 'hidden';
+      button.style.display = 'flex';
+      button.style.alignItems = 'center';
+      button.style.justifyContent = 'center';
+      button.style.textAlign = 'center';
+      button.style.padding = '1vw';
+      let fontSize = 20;
+  
+      // Set max size first
+      button.style.fontSize = fontSize + 'px';
+  
+      const parent = button.parentElement;
+      const maxWidth = parent.clientWidth;
+      const maxHeight = parent.clientHeight;
+  
+      // Shrink font size until fits
+      while (
+        (button.scrollWidth > maxWidth|| button.scrollHeight > maxHeight) &&
+        fontSize > 5
+      ) {
+        fontSize -= 4;
+        button.style.fontSize = fontSize + 'px';
+      }
+    });
+  }
 
 //main table clearing
 socket.on('clr_table', (val =>{
@@ -48,7 +83,7 @@ socket.on('table_row', (full_tab_data) =>{
         bingo_button.setAttribute('id', events_ids.shift())
         let block_id = completed.shift()
         console.log(block_id)
-        bingo_button.style.cssText = 'width: 20vw; aspect-ratio: 1/1; border: none; border-radius: 100%; background-color: #ffffff;'
+        bingo_button.style.cssText = 'width: 18vw; aspect-ratio: 1/1; border: none; border-radius: 100%; background-color: #ffffff;'
         if(block_id==1){
             bingo_button.disabled = 'True'
             bingo_button.style.backgroundColor = 'rgb(133, 255, 188)'
@@ -69,8 +104,10 @@ socket.on('table_row', (full_tab_data) =>{
         })
         td.appendChild(bingo_button)
         tr.appendChild(td)
+    
     })
     table1.appendChild(tr)
+    text_scalling()
 })
 
 

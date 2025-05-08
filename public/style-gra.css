@@ -1,3 +1,6 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body {
     font-family: "Arial", sans-serif;
     background: #ffcf86;
@@ -13,78 +16,101 @@ body {
   }
   
   #pierw {
-    font-size: 6rem;
+    font-size: 1.5rem;
   }
   
   #potem {
+    margin: 0.5vw;
+    text-align: center;
     font-size: 10vw;
     width: 100vw;
     height: 100vw;
   }
   #potem table {
-    width: 100%;
-    height: 100%;
+    margin: 0.5vw;
+    border: 0.2vw solid #ffcf86;
+    text-align: center;
+    width: 40vw;
+    max-height: 40vw;
     border-radius: 10vw;
   }
   #potem td {
     border: 0.2vw solid #ffcf86;
-    width: 20%;
     aspect-ratio: 1/1;
     text-align: center;
     vertical-align: middle;
-    font-size: clamp(10px, 5vw, 20px);
-  }
-  
-  #wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2vw;
+    width: 19%;
+    height: 19%;
+    overflow: hidden;
+    word-wrap: break-word;
   }
   
   #wyniki {
-    width: 48vw;
+    margin: 0.5vw;
+    width: 40vw;
     float: left;
     height: 40vw;
   }
   #wyniki table {
-    margin: 1vw;
-    width: 90%;
-    height: 100%;
-    border-radius: 20px;
-    font-size: 3rem;
+    margin: 0.5vw;
+    border: 0.2vw solid #ffcf86;
+    text-align: center;
+    max-width: 40vw;
+    max-height: 40vw;
+    border-radius: 10vw;
   }
   #wyniki td {
     border: 0.2vw solid #ffcf86;
+    aspect-ratio: 1/1;
     text-align: center;
     vertical-align: middle;
-    font-size: clamp(10px, 5vw, 20px);
-    height: 16, 66%;
-    width: 50%;
+    max-width: 19vw;
+
   }
   
   #alerty {
-    width: 48vw;
+    margin: 0.5vw;
+    width: 40vw;
     float: right;
     height: 40vw;
   }
   #alerty table {
-    margin: 1vw;
-    width: 90%;
-    height: 100%;
-    border-radius: 20px;
-    font-size: 3rem;
+    margin: 0.5vw;
+    border: 0.2vw solid #ffcf86;
+    text-align: center;
+    width: 40vw;
+    max-height: 40vw;
+    border-radius: 10vw;
   }
   #alerty td {
     border: 0.2vw solid #ffcf86;
+    aspect-ratio: 1/1;
     text-align: center;
     vertical-align: middle;
-    font-size: clamp(10px, 5vw, 20px);
-    height: 33%;
+    max-width: 19vw;
+
+  }
+  td button {
     width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 0.8;
+    white-space: normal;
+    word-break: break-word;
+    box-sizing: border-box;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-resolution: 1dppx) {
     #wyniki {
       display: none;
     }
