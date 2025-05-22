@@ -18,7 +18,7 @@ const db = mysql.createConnection({
     database: 'bingo'
 });
 
-//client-to-website connection scripts
+//client-website connection scripts
 io.on('connection', (socket) => {
 
     //login table creation
@@ -105,6 +105,19 @@ io.on('connection', (socket) => {
         let currentUser = update_button_data[2]
         db.query("UPDATE "+currentUser.toLowerCase()+" SET Completed=1 WHERE EventId="+completion_id)
         db.query("UPDATE players SET Score=(SELECT COUNT(*) FROM "+currentUser.toLowerCase()+" WHERE Completed=1) WHERE Name='"+currentUser+"'")
+    })
+
+
+    //toplist update function
+    socket.on('toplistupdater', (x) =>{
+        db.query("SELECT Name, Score FROM players ORDER BY Score DESC LIMIT 3;", (err, top_scorers)=>{
+            socket.emit('top_table', top_scorers)
+    })})
+
+
+    //events performed
+    socket.on('event_made', (made_event_data)=>{
+        io.emit('events_table_update', made_event_data)
     })
 
 

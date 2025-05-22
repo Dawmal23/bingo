@@ -57,7 +57,7 @@ body {
     text-align: center;
     max-width: 40vw;
     max-height: 40vw;
-    border-radius: 10vw;
+    border-radius: 5vw;
   }
   #wyniki td {
     border: 0.2vw solid #ffcf86;
